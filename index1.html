@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    .back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #fff;
+      color: #3494e6;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #ec6ead;
+      color: #fff;
+    }
+  </style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nivel 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="startGame()">
+
+<h1 id="tittle"></h1>
+<h3 id="newGame">Jugar de nuevo</h3>
+
+<div id="btnLeft"></div>
+<div id="btnRight"></div>
+<div id="btnUp"></div>
+<div id="btnFire"></div>
+<script src="js/main1.js"></script>
+</body>
+<a href="niveles.html" class="back-button">Atrás</a>
+
+</html>

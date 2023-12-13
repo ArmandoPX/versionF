@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrera de Cubos</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #3494e6, #ec6ead);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    button {
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 1.5em;
+      background-color: #fff;
+      color: #3494e6;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    button:hover {
+      background-color: #ec6ead;
+      color: #fff;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #fff;
+      color: #3494e6;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #ec6ead;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <a href="Inicio.html" class="back-button">Atrás</a>
+  <h1>Cubes racer</h1>
+  <button onclick="window.location.href='index2.html'">Nivel 1</button>
+  <button onclick="window.location.href='index.html'">Nivel 2</button>
+  <button onclick="window.location.href='index1.html'">Nivel 3</button>
+
+   <script>
+    var currentLevel = 1;  // Inicia en el nivel 1
+
+    function cargarNivel(nivel) {
+      // Cambia el nivel actual
+      currentLevel = nivel;
+
+      // Llama a la función para cargar el nivel
+      loadLevel(currentLevel);
+    }
+
+    function loadLevel(level) {
+      switch (level) {
+          case 1:
+              import("./world.js").then(levelModule => {
+                  levelModule.initWorld();
+              });
+              break;
+          case 2:
+              import("./world2.js").then(levelModule => {
+                  levelModule.initLevel2();
+              });
+              break;
+          case 3:
+              import("./world3.js").then(levelModule => {
+                  levelModule.initLevel3();
+              });
+              break;
+          // Agrega más casos según la cantidad de niveles que tengas
+      }
+    }
+
+    // Puedes llamar a esta función para cambiar el nivel
+    function cambiarNivel(nuevoNivel) {
+      cargarNivel(nuevoNivel);
+    }
+  </script>
+
+</body>
+
+
+</html>

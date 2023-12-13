@@ -1,0 +1,62 @@
+:root {
+    --ground: rgb(198, 152, 92);
+    --lightGrass: rgb(23, 199, 28);
+    --darkGrass: rgb(14, 108, 17);
+    --lightSky: rgb(149,194,245);
+    --darkSky: rgb(110,158,244);
+    --player: rgb(246, 255, 100);
+    --playerOpacity: rgba(246, 255, 100, 0.26);
+}
+
+canvas{
+    background: linear-gradient(var(--darkSky), var(--lightSky));
+    opacity: 1;
+transition: 0.2s;
+    position: absolute;
+
+}
+
+
+h1{
+width: 100vw;
+    position: absolute;
+
+    text-align: center;
+
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: -100px;
+    color: white;
+
+}
+
+
+
+#newGame{
+
+    position: absolute;
+
+
+right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+
+    color: white;
+    background-color:var( --ground);
+    padding: 10px;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+#newGame:hover{
+    cursor: pointer;
+}
+
+body {
+    overflow:hidden;
+padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+ 

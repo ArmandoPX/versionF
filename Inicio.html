@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUBES RACER</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #3498db, #2ecc71); /* Degradado entre azul y verde que abarca toda la pantalla */
+            color: #ecf0f1; /* Texto blanco para mayor contraste */
+            text-align: center; /* Centrar el contenido */
+            padding: 20px; /* Agregar espacio alrededor del contenido */
+            font-family: Arial, sans-serif; /* Establecer una fuente */
+            margin: 0; /* Eliminar el margen predeterminado del body */
+            height: 100vh; /* Ajustar la altura del body al 100% de la ventana */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            margin-bottom: 20px; /* Agregar espacio debajo del título */
+        }
+
+        button {
+            padding: 20px 40px; /* Ajusté el tamaño para hacer los botones más grandes */
+            font-size: 18px;
+            background-color: #e67e22; /* Fondo naranja brillante para el botón */
+            color: #ecf0f1; /* Texto blanco para el botón */
+            border: none; /* Eliminar borde del botón */
+            border-radius: 8px; /* Agregar bordes redondeados */
+            cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+            transition: background-color 0.3s; /* Agregar transición al color de fondo */
+            margin-bottom: 20px; /* Agregar margen inferior al botón */
+            display: block; /* Mostrar los botones como bloques para que estén uno debajo del otro */
+            margin: 10px auto; /* Centrar los botones horizontalmente */
+        }
+
+        button:hover {
+            background-color: #d35400; /* Cambiar el color de fondo al pasar sobre el botón */
+        }
+
+        img {
+            max-width: 100%; /* Hacer que la imagen sea responsiva */
+            margin-top: 20px; /* Agregar espacio sobre la imagen */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bienvenido a Cube racer</h1>
+    
+    <button onclick="window.location.href='niveles.html'">Iniciar juego</button>
+    <button onclick="window.location.href='instrucciones.html'">Instrucciones</button>
+    
+</body>
+
+</html>
